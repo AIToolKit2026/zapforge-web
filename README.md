@@ -48,7 +48,7 @@ whole page.
 
 The project is a standard Next.js app — Vercel detects the framework
 automatically. `metadataBase` in `src/app/layout.tsx` is set to
-`https://zapforge.ai`; update it to the production domain so Open Graph URLs
+the production URL; update it to the production domain so Open Graph URLs
 resolve correctly.
 
 ## Content note

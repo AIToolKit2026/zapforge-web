@@ -19,7 +19,8 @@ const description =
   "Governed migration and modernisation for Gulf banks. Runs on your own infrastructure, inside your own jurisdiction. CRM, cards, data platforms, customer forms and the API layer.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zapforge.ai"),
+  // Update when a custom domain is attached in Vercel.
+  metadataBase: new URL("https://zapforge-web.vercel.app"),
   title,
   description,
   keywords: [
