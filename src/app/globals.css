@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Deck palette — dark navy ground, brand blue, forge orange */
+  --color-navy-950: #101c36;
+  --color-navy-900: #1b2a4e;
+  --color-navy-800: #23345c;
+  --color-navy-700: #2d4270;
+  --color-ink: #1a2540;
+  --color-slate-body: #5b6780;
+  --color-brand: #2f66f5;
+  --color-brand-bright: #4d7cfe;
+  --color-brand-deep: #1e4fd0;
+  --color-forge: #ee6a24;
+  --color-mist: #eef2ff;
+  --color-line: #e2e8f2;
+  --color-line-dark: #2f4374;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Respect users who ask for less motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
