@@ -46,10 +46,15 @@ whole page.
 
 ## Deployment
 
-The project is a standard Next.js app — Vercel detects the framework
-automatically. `metadataBase` in `src/app/layout.tsx` is set to
-the production URL; update it to the production domain so Open Graph URLs
-resolve correctly.
+Deployed on Vercel (team `zapforge`, project `zapforge-web`) and connected to
+this repository, so every push to `main` ships to production and branches get
+preview URLs.
+
+Production: **https://zapforge-web.vercel.app**
+
+`metadataBase` in `src/app/layout.tsx` points at that URL. Update it if a custom
+domain is attached, otherwise Open Graph and canonical URLs will resolve against
+the old host.
 
 ## Content note
 
