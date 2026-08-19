@@ -95,10 +95,23 @@ export const product = {
   features: [
     {
       n: "01",
+      title: "Every migration in one workspace",
+      body: "The workbench is the home screen: every run across every connected repository, what is queued, what is running and what failed. Start a new one from three modes, or reopen a past run and branch it.",
+      bullets: [
+        "Migration, modernization and greenfield modes",
+        "Recent runs across every connected repository",
+        "Status, mode and elapsed time at a glance",
+      ],
+      // Rendered by WorkbenchMock rather than screenshotted — see that component.
+      shot: "mock:workbench",
+      alt: "The ZapForge workbench home screen listing five recent runs across four repositories, with cards for the migration, modernization and greenfield modes",
+    },
+    {
+      n: "02",
       title: "Describe the change in plain language",
       body: "Pick a repository and a branch, choose migration, modernization or greenfield, and say what you want. Or start from a template that already encodes the migration. Model and engine are selectable per run — Claude Agent SDK or the API directly.",
       bullets: [
-        "Three modes: migration, modernization, greenfield",
+        "Plain-language prompt, or start from a template",
         "Repo and branch picker, or upload a zip",
         "Per-run model and engine selection",
       ],
@@ -106,7 +119,7 @@ export const product = {
       alt: "ZapForge composer with a migration prompt describing an Express 4 to Fastify 4 move on acme/payments-service",
     },
     {
-      n: "02",
+      n: "03",
       title: "It plans before it touches anything",
       body: "ZapForge indexes the repository, detects what is actually in use, and proposes a step-by-step plan with file counts and expected durations. Not a single line is written until a human approves that plan.",
       bullets: [
@@ -118,7 +131,7 @@ export const product = {
       alt: "ZapForge run plan showing six completed stages from repository scan through test suite, with per-stage durations",
     },
     {
-      n: "03",
+      n: "04",
       title: "Every change lands as a reviewable diff",
       body: "Execution happens in a throwaway git worktree, so your checkout and your branch are never touched. What comes back is a diff — split or unified, per file, with line counts — reviewed exactly the way your team already reviews code.",
       bullets: [
@@ -130,7 +143,7 @@ export const product = {
       alt: "ZapForge split diff view comparing before and after for server.ts, showing plus eighteen and minus sixteen lines",
     },
     {
-      n: "04",
+      n: "05",
       title: "A pull request your reviewer can actually read",
       body: "Highlights, a check matrix with durations, and the commit list — generated from what the run actually did rather than written by hand afterwards. This is the artefact that goes to change control.",
       bullets: [
@@ -142,7 +155,7 @@ export const product = {
       alt: "ZapForge pull request preview with highlights, a passing check matrix and the commit list for the Fastify migration",
     },
     {
-      n: "05",
+      n: "06",
       title: "Full transcript, and what it cost",
       body: "Every command the run issued, in order, kept with the run. Alongside it a token and USD meter, so spend is visible while the work is happening rather than as a surprise on an invoice at the end of the month.",
       bullets: [

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container, SectionHeading } from "./Section";
+import WorkbenchMock from "./WorkbenchMock";
 import { product } from "@/content/site";
 
 export default function Product() {
@@ -72,15 +73,21 @@ export default function Product() {
                   <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                   <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                 </div>
-                <Image
-                  src={f.shot}
-                  alt={f.alt}
-                  width={2704}
-                  height={1556}
-                  priority={i === 0}
-                  sizes="(min-width: 1280px) 76rem, 100vw"
-                  className="w-full"
-                />
+                {f.shot.startsWith("mock:") ? (
+                  <div role="img" aria-label={f.alt}>
+                    <WorkbenchMock />
+                  </div>
+                ) : (
+                  <Image
+                    src={f.shot}
+                    alt={f.alt}
+                    width={2039}
+                    height={1556}
+                    priority={i <= 1}
+                    sizes="(min-width: 1280px) 76rem, 100vw"
+                    className="w-full"
+                  />
+                )}
               </figure>
             </article>
           ))}

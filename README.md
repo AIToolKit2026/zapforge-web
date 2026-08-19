@@ -69,21 +69,41 @@ the old host.
 `public/shots/` holds the application screenshots used by the `product` section.
 They are copied from `screenshots/dark/` in the product repo:
 
-| File           | Source                          |
-| -------------- | ------------------------------- |
-| `composer.png` | `04-composer-migration.png`     |
-| `plan.png`     | `11-run-plan.png`               |
-| `diff.png`     | `14-run-diff-split.png`         |
-| `summary.png`  | `16-run-pr-summary.png`         |
-| `logs.png`     | `17-run-logs.png`               |
+| File           | Source                      |
+| -------------- | --------------------------- |
+| `composer.png` | `04-composer-migration.png` |
+| `plan.png`     | `11-run-plan.png`           |
+| `diff.png`     | `14-run-diff-split.png`     |
+| `summary.png`  | `16-run-pr-summary.png`     |
+| `logs.png`     | `17-run-logs.png`           |
 
 They show **demonstration data** (`acme/payments-service`), which the section
-masthead states explicitly. Re-copy them when the product UI changes.
+masthead states explicitly.
 
-The hero visual is not a screenshot — `src/components/RunMock.tsx` is an
-animated recreation of the same run, so it stays crisp at any resolution. Its
-stage names and durations mirror the product's own seed data. It honours
-`prefers-reduced-motion` by rendering the finished state statically.
+**Each is cropped to the main pane (x≥665 of the 2704px original).** The
+committed dark captures were taken mid theme transition, so the left run-list
+sidebar rendered with light-mode styling — white rows inside an otherwise dark
+window. The app itself is correct (`.zf-row` resolves to `--bg-subtle` /
+`--bg-muted`, which are `#111111` / `#1a1a1a` under `[data-theme="dark"]`); only
+the captures are wrong. Cropping removes the affected region and makes the
+remaining UI larger. Re-crop from the same offset if you re-copy them, or drop
+the crop once the product repo has clean dark captures.
+
+The root cause is worth fixing upstream: `tests/e2e/screenshots.spec.ts` selects
+the theme toggle with `button.zf-themetoggle`, which now matches three buttons
+(Anvil, theme, Help) and so clicks the wrong one; it also waits only 80ms and
+never disables CSS transitions before capturing.
+
+## Rendered mocks
+
+Two product surfaces are built in markup rather than screenshotted, so they are
+crisp at any resolution and always render in true dark mode:
+
+- `src/components/RunMock.tsx` — the animated hero run. Replays the approval
+  gate, and honours `prefers-reduced-motion` by pinning to the finished state.
+- `src/components/WorkbenchMock.tsx` — the workspace screen. Uses the
+  application's own dark tokens; its dark capture was unusable for the reason
+  above. Referenced from `site.ts` via the `mock:workbench` sentinel.
 
 ## Content note
 
