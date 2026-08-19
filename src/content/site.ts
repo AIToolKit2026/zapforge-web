@@ -12,7 +12,7 @@ export const contact = {
   name: "Anurag Mahanto",
   email: "anurag.mahanto@zapcg.com",
   company: "Zapcom",
-  parentLine: "A Zapcom company",
+  parentLine: "A Zapcom product",
 } as const;
 
 export const nav = [

@@ -71,7 +71,7 @@ export default function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          Plan · Approve · Execute · Diff — a Zapcom company
+          Plan · Approve · Execute · Diff — a Zapcom product
         </div>
       </div>
     ),

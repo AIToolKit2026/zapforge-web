@@ -30,7 +30,7 @@ components — each exported object maps to one section of the page:
 
 | Export        | Section                                                    |
 | ------------- | ---------------------------------------------------------- |
-| `contact`     | Contact name, email, "A Zapcom company" line               |
+| `contact`     | Contact name, email, "A Zapcom product" line               |
 | `nav`         | Header navigation                                           |
 | `hero`        | Hero headline, lede, CTAs, proof badges                     |
 | `stacks`      | Legacy-stack strip under the hero                           |
