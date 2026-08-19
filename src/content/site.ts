@@ -9,8 +9,7 @@
  */
 
 export const contact = {
-  name: "Anurag Mahanto",
-  email: "anurag.mahanto@zapcg.com",
+  email: "Zapforge@zapcg.com",
   company: "Zapcom",
   parentLine: "A Zapcom product",
 } as const;

@@ -39,11 +39,9 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-line-dark pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-white/50">
-            <span className="font-medium text-white/70">{contact.name}</span>
-            {" · "}
             <a
               href={`mailto:${contact.email}`}
-              className="transition-colors hover:text-white"
+              className="font-medium text-white/70 transition-colors hover:text-white"
             >
               {contact.email}
             </a>
