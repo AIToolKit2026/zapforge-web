@@ -1,10 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Mandate from "@/components/Mandate";
-import Evidence from "@/components/Evidence";
-import Scope from "@/components/Scope";
-import Workstreams from "@/components/Workstreams";
+import StackStrip from "@/components/StackStrip";
+import Problem from "@/components/Problem";
+import Product from "@/components/Product";
 import Gates from "@/components/Gates";
+import Templates from "@/components/Templates";
+import Workstreams from "@/components/Workstreams";
+import Regulated from "@/components/Regulated";
 import Security from "@/components/Security";
 import Pricing from "@/components/Pricing";
 import Cta from "@/components/Cta";
@@ -16,11 +18,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Mandate />
-        <Evidence />
-        <Scope />
-        <Workstreams />
+        <StackStrip />
+        <Problem />
+        <Product />
         <Gates />
+        <Templates />
+        <Workstreams />
+        <Regulated />
         <Security />
         <Pricing />
         <Cta />

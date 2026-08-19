@@ -3,7 +3,7 @@ import { security } from "@/content/site";
 
 export default function Security() {
   return (
-    <section id="security" className="bg-slate-50 py-20 sm:py-28">
+    <section id="security" className="bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow={security.eyebrow}

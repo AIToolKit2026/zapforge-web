@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "ZapForge — Modernise the layer around the core";
+export const alt = "ZapForge — Migrate legacy code at scale, without losing control of it";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -36,7 +36,7 @@ export default function OpengraphImage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Modernise the layer
+            Migrate legacy code
           </div>
           <div
             style={{
@@ -47,7 +47,7 @@ export default function OpengraphImage() {
               letterSpacing: "-0.02em",
             }}
           >
-            around the core.
+            at scale.
           </div>
           <div
             style={{
@@ -58,7 +58,7 @@ export default function OpengraphImage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Leave the core alone.
+            Without losing control.
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          UAE · KSA · Bahrain · Qatar — a Zapcom company
+          Plan · Approve · Execute · Diff — a Zapcom company
         </div>
       </div>
     ),

@@ -1,32 +1,60 @@
 import Logo from "./Logo";
 import { Container } from "./Section";
-import { contact } from "@/content/site";
+import { contact, footer } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line-dark bg-navy-950 py-12">
+    <footer className="border-t border-line-dark bg-navy-950 py-14">
       <Container>
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
+        <div className="grid grid-cols-2 gap-10 lg:grid-cols-4">
+          <div className="col-span-2 lg:col-span-2">
             <Logo tone="dark" className="text-xl" />
             <p className="mt-2 text-sm text-white/40 italic">
               {contact.parentLine}
             </p>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/50">
+              Governed migration and modernization for large legacy estates.
+              Plan-gated, reviewed as a diff, run on your own machines.
+            </p>
           </div>
-          <div className="text-sm text-white/50 sm:text-right">
-            <p className="font-medium text-white/70">{contact.name}</p>
+
+          {footer.columns.map((col) => (
+            <nav key={col.title} aria-label={col.title}>
+              <p className="eyebrow text-white/45">{col.title}</p>
+              <ul className="mt-4 space-y-3">
+                {col.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-white/65 transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 border-t border-line-dark pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-white/50">
+            <span className="font-medium text-white/70">{contact.name}</span>
+            {" · "}
             <a
               href={`mailto:${contact.email}`}
               className="transition-colors hover:text-white"
             >
               {contact.email}
             </a>
-          </div>
+          </p>
+          <p className="text-sm text-white/40">
+            © {new Date().getFullYear()} {contact.company}
+          </p>
         </div>
-        <p className="mt-8 border-t border-line-dark pt-6 text-xs leading-relaxed text-white/35">
-          Institutional references on this page are drawn from the
-          institutions&rsquo; own published disclosures and are cited as public
-          market evidence, not as a client list.
+
+        <p className="mt-6 text-xs leading-relaxed text-white/35">
+          {footer.note}
         </p>
       </Container>
     </footer>

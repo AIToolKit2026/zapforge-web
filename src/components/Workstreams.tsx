@@ -3,7 +3,7 @@ import { workstreams } from "@/content/site";
 
 export default function Workstreams() {
   return (
-    <section id="workstreams" className="bg-slate-50 py-20 sm:py-28">
+    <section id="workstreams" className="bg-white py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow={workstreams.eyebrow}

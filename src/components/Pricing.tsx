@@ -3,7 +3,7 @@ import { pricing } from "@/content/site";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-white py-20 sm:py-28">
+    <section id="pricing" className="bg-slate-50 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow={pricing.eyebrow}

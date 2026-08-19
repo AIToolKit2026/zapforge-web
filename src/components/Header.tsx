@@ -55,7 +55,7 @@ export default function Header() {
               href="#contact"
               className="rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-bright focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bright"
             >
-              Book 20 minutes
+              Book a demo
             </a>
           </nav>
 
@@ -118,7 +118,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-3 mb-2 block rounded-md bg-brand px-4 py-3 text-center text-sm font-semibold text-white"
             >
-              Book 20 minutes
+              Book a demo
             </a>
           </Container>
         </nav>

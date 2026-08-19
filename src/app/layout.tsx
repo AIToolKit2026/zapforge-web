@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const title = "ZapForge — Modernise the layer around the core";
+const title = "ZapForge — Migrate legacy code at scale, without losing control of it";
 const description =
-  "Governed migration and modernisation for Gulf banks. Runs on your own infrastructure, inside your own jurisdiction. CRM, cards, data platforms, customer forms and the API layer.";
+  "ZapForge is a migration and modernization workbench. Describe a change; it plans it, waits for a human to approve the plan, executes in an isolated worktree, and returns a reviewable diff, a test report and a security scan \u2014 all on your own machines.";
 
 export const metadata: Metadata = {
   // Update when a custom domain is attached in Vercel.
@@ -24,15 +24,21 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
+    "legacy migration",
+    "code modernization",
+    "application modernization",
+    "AI code migration",
+    "COBOL modernization",
+    "Oracle Forms migration",
+    "Spring Boot upgrade",
+    "javax to jakarta",
+    "governed AI coding",
     "open banking",
     "ISO 20022",
-    "Open Finance",
-    "core banking modernisation",
-    "legacy migration",
     "CBUAE",
     "SAMA",
-    "Gulf banking",
     "Zapcom",
+    "ZapForge",
   ],
   authors: [{ name: "Zapcom" }],
   openGraph: {
